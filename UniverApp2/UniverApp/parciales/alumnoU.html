@@ -1,0 +1,24 @@
+<div class="row">
+    <form ng-submit="guardar()">
+        <div ng-hide="creando">
+            Codigo:
+            <input  type="text" class="form-control" ng-model="alumno.codigo">
+        </div>
+
+        <br>
+        Nombre:
+        <input type="text" class="form-control" ng-model="alumno.nombre" required>
+        <br>
+        Telefono:
+        <input type="text" class="form-control" ng-model="alumno.telefono" ui-mask="{{telefonoMask}}" required>
+        <br>
+        Direccion:
+        <textarea rows="5" ng-model="alumno.direccion" class="form-control" required></textarea>
+        <br>
+        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+        <a href="#!/alumnos" class="btn btn-danger">Cancelar</a>
+        <br>
+        <br>
+        <p class="text-success animated fadeIn" ng-show="actualizado">Registro Actualizado</p>
+    </form>
+</div>
